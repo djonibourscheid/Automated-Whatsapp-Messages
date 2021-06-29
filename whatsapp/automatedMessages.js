@@ -4,10 +4,13 @@ function sendMessage(messageText) {
   const totalLines = lines.length;
 
   setInterval(() => {
+    // Se o contador já chegou no número de mensagens
+    // If the counter has already arrived in the number of messages
     if (counter >= lines.length) return;
 
-
     if (lines[counter].trim() != '') {
+      // Número total de linhas - Número da linha atual | Mensagem enviada
+      // Total number of lines  - Current line number   | Message sent
       console.log(`${totalLines} - ${counter + 1} | ${lines[counter]}`)
 
       window.InputEvent = window.Event || window.InputEvent;
